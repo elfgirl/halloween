@@ -7,7 +7,8 @@ Uses a [PIR Motion detector](https://www.adafruit.com/product/189) as an activat
 
 Currently, there are modes for solid eyes, flashing synchronously, and flashing L/R alternately.
 
-There is a basic time check to keep it off from 1am to 6pm using local system time. If not dark it will sleep for 30 minutes between checks. 
+There is a basic time check to keep it off from 1am to 6pm using UTC time and cheap datezone hack. See the Waterbug project for intelligent sunrise/sunset timers. If not dark it will sleep for 30 minutes between checks. 
+
 The polling loop is nothing fancy, just something to keep things from slamming the CPU and thus the battery.
 
-
+Added a supervisor configuration file to maintain execution. 
