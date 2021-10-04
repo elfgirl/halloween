@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import datetime
-import random
 import time
 
 import RPi.GPIO as GPIO
