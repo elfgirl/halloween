@@ -62,7 +62,7 @@ def solid_eyes_sync() :
 
 def wait_for_dark():
     current_time = datetime.datetime.now()
-    if current_time.hour > 0 and current_time.hour < 18 :
+    if current_time.hour > 1 and current_time.hour < 18 :
         return True
     return False
 
