@@ -4,9 +4,9 @@ import time
 
 import RPi.GPIO as GPIO
 
-l_ledPin = 13  # define ledPin
-r_ledPin = 19
-a_ledPin = 26
+l_led_pin = 13  # define led_pin
+r_led_pin = 19
+a_led_pin = 26
 sensorPin = 18
 
 
@@ -15,19 +15,19 @@ def setup():
     global p_r
 
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(l_ledPin, GPIO.OUT)
-    GPIO.output(l_ledPin, GPIO.LOW)
+    GPIO.setup(l_led_pin, GPIO.OUT)
+    GPIO.output(l_led_pin, GPIO.LOW)
 
-    GPIO.setup(r_ledPin, GPIO.OUT)
-    GPIO.output(r_ledPin, GPIO.LOW)
+    GPIO.setup(r_led_pin, GPIO.OUT)
+    GPIO.output(r_led_pin, GPIO.LOW)
 
-    GPIO.setup(a_ledPin, GPIO.OUT)
-    GPIO.output(a_ledPin, GPIO.HIGH)  # Keep that green glow
+    GPIO.setup(a_led_pin, GPIO.OUT)
+    GPIO.output(a_led_pin, GPIO.HIGH)  # Keep that green glow
 
-    p_l = GPIO.PWM(l_ledPin, 500)  # set PWM Frequence to 500Hz
+    p_l = GPIO.PWM(l_led_pin, 500)  # set PWM Frequence to 500Hz
     p_l.start(0)  # set initial Duty Cycle to 0
 
-    p_r = GPIO.PWM(r_ledPin, 250)  # set PWM Frequence to 500Hz
+    p_r = GPIO.PWM(r_led_pin, 250)  # set PWM Frequence to 500Hz
     p_r.start(0)  # set initial Duty Cycle to 0
 
 
